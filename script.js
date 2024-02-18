@@ -3,9 +3,10 @@ const etchBoard = document.querySelector(".etch");
 const colors = ["blue", "red", "green", "yellow", "purple", "orange", "brown", "pink", "cyan"];
 
 resetBtn.addEventListener("click", generatePad);
+generatePad();
 
 function generatePad () {
-    let userInput = parseInt(prompt('How many squares?'));
+    let userInput = parseInt(prompt('How many squares? Between 2-100'));
     if (userInput > 100) {userInput = 100;}
 
     removeAllChildNodes(etchBoard);
